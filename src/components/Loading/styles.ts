@@ -7,5 +7,5 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: ${colors.blue};
+  background-color: ${(props) => props.theme.colors.background};
 `;

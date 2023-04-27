@@ -1,9 +1,10 @@
 import { NavBarComponent, SectionComponent } from "../../components";
 import { CardContainer, Title } from "./style";
-import animationData from "../../lotties/programmer.json";
+import animationData from "../../lotties/aboutme.json";
 import Lottie from "react-lottie";
 import { useEffect, useState } from "react";
 import Loading from "../../components/Loading";
+import { Content } from "../Home/style";
 
 const MyLottie = () => {
   const defaultOptions = {
@@ -15,7 +16,7 @@ const MyLottie = () => {
     },
   };
 
-  return <Lottie options={defaultOptions} height={300} width={500} />;
+  return <Lottie options={defaultOptions} height={250} width={280} />;
 };
 
 const AboutMe = () => {
@@ -39,8 +40,12 @@ const AboutMe = () => {
         <div className="AboutMe">
           <NavBarComponent />
           <SectionComponent>
-            <MyLottie />
+            <Content>
             <Title>Sobre mim:</Title>
+            <MyLottie />
+            
+            </Content>
+            
             <CardContainer>
               <div className="card card1">
                 <h3 className="text-card">

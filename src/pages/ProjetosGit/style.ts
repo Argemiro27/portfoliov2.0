@@ -11,7 +11,6 @@ export const Container = styled.div`
   height: calc(100vh - 200px);
   border: 2px solid #191721;
   border-top: 50px solid #191721;
-  background-color: #343140;
   border-radius: 10px;
   width: 600px;
   margin: auto;
@@ -23,7 +22,7 @@ export const Title = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: #706280;
+  color: ${(props) => props.theme.colors.text};
   width: 100%;
   height: 50px;
   position: absolute;
@@ -32,18 +31,27 @@ export const Title = styled.div`
   border-radius: 10px 10px 0 0;
 `;
 
+
+
 export const Content = styled.div`
-  width: 100%;
+  display: block;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background-color: #4750a1;
+  border-radius: 10px;
+  .myphoto{
+    display: flex;
+    justify-content: center;
+  }
   @media (max-width: 600px) {
     padding: 5px;
   }
-`;
+`
 
 export const Ul = styled.ul`
   overflow-x: auto;
@@ -51,11 +59,11 @@ export const Ul = styled.ul`
   &::-webkit-scrollbar {
     width: 12px;
     border-radius: 10px;
-    background-color: ${colors.darkblue}; ;
+    background-color: ${colors.black}; ;
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: ${colors.blue}; 
+    background-color: ${colors.darkgray}; 
   }
 `;
 
@@ -65,19 +73,19 @@ export const Li = styled.li`
   text-align: start;
   word-break: break-word;
   margin: 10px;
-  box-shadow: 1px 1px 1px 2px ${colors.darkblue};
+  box-shadow: 1px 1px 1px 2px ${(props) => props.theme.colors.bgBorder};
   gap: 3px;
   border-radius: 10px;
   padding: 10px;
-  color: #0f0d14;
-  background-color: ${colors.blue};
+  color: ${(props) => props.theme.colors.text};
+  background-color: ${(props) => props.theme.colors.background};
   @media (max-width: 760px) {
     font-size: 13px;
   }
 `;
 
 export const TitleProject = styled.strong`
-  color: #0f0d14;
+  color: ${colors.lightgray};
 `;
 
 export const Url = styled.span`

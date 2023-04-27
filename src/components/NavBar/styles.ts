@@ -6,15 +6,15 @@ export const MenuContainer = styled.div`
   flex-direction: column;
   width: 10%;
   height: 100%;
-  color: ${colors.blue};
+  color: ${(props) => props.theme.colors.text};
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 1;
   margin: auto;
-  background-color: ${colors.blue};
-  border-right: 3px solid ${colors.darkblue};
+  background-color: ${(props) => props.theme.colors.background};
+  border-right: 3px solid ${(props) => props.theme.colors.bgBorder};
 
 `;
 
@@ -26,9 +26,9 @@ export const Icon = styled.div`
   height: 80px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
-  color: ${(props) => props.theme.colors.text};
+  color: #4750a1;
   &:hover {
-    background-color: ${colors.darkblue};
+    background-color: ${(props) => props.theme.colors.bgBorder};
   }
 `;
 

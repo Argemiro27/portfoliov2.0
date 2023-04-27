@@ -59,7 +59,7 @@ const NavBar: React.FC = () => {
             <FaGithub size={20} />
           </S.Icon>
         </Link>
-        <Link to={"#"}>
+        <Link to={"/contato"}>
           <S.Icon>
             <FaMailBulk size={20} />
           </S.Icon>

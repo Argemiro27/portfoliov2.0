@@ -8,6 +8,10 @@ export const Title = styled.div`
   font-style: italic;
   display: inline-block;
   margin-bottom: 15px;
+  padding: 7px;
+  background: ${(props) => props.theme.colors.bgBorder};
+  display: block;
+  text-align: center;
   &::after {
     content: "";
     display: block;
@@ -15,8 +19,8 @@ export const Title = styled.div`
     width: 0;
     margin-top: 5px;
     margin-bottom: -6px;
-    background: ${colors.blue};
-    transition: width 0.5s ease;
+    background: #4750a1;
+    transition: width 2s ease;
   }
   &:hover::after {
     width: 100%;
@@ -39,15 +43,15 @@ export const CardContainer = styled.div`
     background-size: cover;
     background-position: center;
     border-radius: 10px;
-    border: 2px solid ${colors.blue};
+    border: 2px solid ${(props) => props.theme.colors.bgBorder};
     
-    filter: contrast(100%);
+    filter: grayscale(100%);
     :hover {
-      transition: 0.8s;
-      filter: contrast(70%);
+      transition: 0.5s;
+      filter: grayscale(70%);
     }
     .text-card {
-      background-color: ${colors.darkblue};
+      background-color: ${(props) => props.theme.colors.background};
       min-height: 20vh;
       border-radius: 10px;
       display: flex;
@@ -55,7 +59,7 @@ export const CardContainer = styled.div`
       justify-content: center;
       font-size: 15px;
       padding: 15px;
-      color: ${colors.lightblue};
+      color: ${(props) => props.theme.colors.text};
       position: relative;
       top: 200px;
     }

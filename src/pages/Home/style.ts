@@ -1,6 +1,21 @@
 import styled from "styled-components";
 import { colors } from "../../styles/global";
 
+export const Content = styled.div`
+  display: block;
+  
+  background-color: ${(props) => props.theme.colors.background};
+  padding: 10px;
+  border-radius: 10px;
+  .myphoto{
+    display: flex;
+    justify-content: center;
+  }
+  .column2{
+    margin-top: 30px;
+  }
+`
+
 export const Title = styled.div`
   position: relative;
   font-size: 25px;
@@ -8,6 +23,10 @@ export const Title = styled.div`
   font-style: italic;
   display: inline-block;
   margin-bottom: 15px;
+  padding: 7px;
+  background: ${(props) => props.theme.colors.bgBorder};
+  display: block;
+  text-align: center;
   &::after {
     content: "";
     display: block;
@@ -15,7 +34,7 @@ export const Title = styled.div`
     width: 0;
     margin-top: 5px;
     margin-bottom: -6px;
-    background: ${colors.blue};
+    background: #4750a1;
     transition: width 0.5s ease;
   }
   &:hover::after {
@@ -35,7 +54,7 @@ export const MyPhoto = styled.div`
   background-size: cover;
   margin-right: 50px;
   border-radius: 100px;
-  filter: grayscale(30%);
+  filter: grayscale(20%);
 `;
 
 export const AboutLottie = styled.div`
@@ -47,6 +66,7 @@ export const AboutLottie = styled.div`
 export const CardContainer = styled.div`
   display: flex;
   justify-content: center;
+
   .card {
     width: 80px;
     height: 80px;
@@ -55,7 +75,7 @@ export const CardContainer = styled.div`
     background-position: center;
     transition: 1s;
     transform: rotate(0deg);
-    filter: grayscale(30%);
+    filter: grayscale(80%);
     :hover {
       transition: 1s;
       transform: rotate(360deg);
@@ -66,6 +86,13 @@ export const CardContainer = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
+  .card-wrapper{
+    display: block;
+    text-align: center;
+    .progress{
+      width: 50px;
     }
   }
   .card.card1 {

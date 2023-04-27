@@ -3,6 +3,22 @@ import { NavBarComponent, SectionComponent } from "../../components";
 import Loading from "../../components/Loading";
 import { CardContainer, Title } from "./style";
 import { Link } from "react-router-dom";
+import Lottie from "react-lottie";
+import animationData from "../../lotties/programmer.json";
+import { Content } from "../Home/style";
+
+const MyLottie = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  return <Lottie options={defaultOptions} height={240} width={280} />;
+};
 
 const Projetos = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +41,11 @@ const Projetos = () => {
         <div className="Projetos">
           <NavBarComponent />
           <SectionComponent>
-            <Title>Alguns dos meus projetos ❤</Title>
+            <Content>
+            <Title>Alguns projetos:</Title>
+            <MyLottie />
+            
+            </Content>
             <CardContainer>
               <div className="card card1">
                 <h3 className="text-card">

@@ -5,7 +5,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import { About, Home, Projetos, ProjetosGit } from "./pages";
+import { About, Contato, Home, Projetos, ProjetosGit } from "./pages";
 
 const MyRoutes = () => {
   return (
@@ -16,6 +16,7 @@ const MyRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/projetos" element={<Projetos />} />
         <Route path="/projetosgit" element={<ProjetosGit />} />
+        <Route path="/contato" element={<Contato />} />
       </Routes>
     </Router>
   );
