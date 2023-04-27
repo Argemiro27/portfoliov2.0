@@ -100,9 +100,7 @@ const Projetos = () => {
               <div className="card card4">
                 <h3 className="text-card">
                   <div className="container">
-                    Sistema de vendas com cadastro de usuários, produtos e
-                    vendas. Desenvolvido com Laravel (PHP) e MySQL (utilizando
-                    Docker) <br /> <br />
+                    Sistema de Fast Food. Desenvolvido com React e Firebase. <br /> <br />
                     Link para o projeto:{" "}
                     <Link to={"https://github.com/Argemiro27/rusheats"}>
                       Clique aqui
