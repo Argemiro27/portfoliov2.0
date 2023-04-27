@@ -59,11 +59,11 @@ export const Ul = styled.ul`
   &::-webkit-scrollbar {
     width: 12px;
     border-radius: 10px;
-    background-color: ${colors.black}; ;
+    background-color: #4750a1;
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: ${colors.darkgray}; 
+    background-color: ${(props) => props.theme.colors.background};
   }
 `;
 
